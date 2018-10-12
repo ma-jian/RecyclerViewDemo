@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.support.v7.widget.GridLayoutManager
 import android.support.v7.widget.LinearLayoutManager
 import com.example.m.recyclerviewdemo.custom.RecyclerItemDecoration
+import com.example.m.recyclerviewdemo.custom.TimeShaftItemDecoration
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -15,7 +16,7 @@ class MainActivity : AppCompatActivity() {
 
         recyclerView.adapter = RecyclerViewAdapter()
         recyclerView.layoutManager = LinearLayoutManager(this)
-        recyclerView.addItemDecoration(RecyclerItemDecoration())
+        recyclerView.addItemDecoration(TimeShaftItemDecoration(this))
 
 
         manager_type.text = recyclerView.layoutManager.toString()
